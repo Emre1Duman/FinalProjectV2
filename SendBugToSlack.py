@@ -43,7 +43,7 @@ def send_message(sc):
 ##Send message to SLACK##
     def send_slack_message(Smessage):
         payload = '{"text":"%s"}' % Smessage
-        #response = requests.post('https://hooks.slack.com/services/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',
+        response = requests.post('insert webhook link',
                                 data=payload)
         print(response.text)
 
