@@ -11,10 +11,10 @@ sqs = boto3.client('sqs')
 queue_url ='https://sqs.us-east-1.amazonaws.com/900076774107/PriorityBugQueue'
 
 ##Trello Connections##
-trello_url = "https://api.trello.com/1/cards"
-trello_token = "7614ef6bcfe62f06280173cd28c08848c85a773239ab8d1da62c92ad52771ba5"
-trello_key = "64dd7fb11f2e28dac1d87ff746056da4"
-trello_idList = "62ac7cd109f0525519df3c55"
+trello_url = ""
+trello_token = ""
+trello_key = ""
+trello_idList = ""
 
 
 s = sched.scheduler(time.time, time.sleep)
@@ -64,7 +64,7 @@ def messageFormatter(response):
 ##Slack##
 def Send_slack_message(Slack_message):
     payload = '{"text":"%s"}' % Slack_message
-    response = requests.post('https://hooks.slack.com/services/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', data=payload)
+    response = requests.post('', data=payload)
     print(response.text)
 
 ##Trello##
